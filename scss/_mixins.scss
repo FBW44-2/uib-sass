@@ -1,0 +1,23 @@
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin card($bg-color: #e8e8e8, $text-color: inherit, $pad: 8px) {
+    // Debug a value
+    // @debug "-------- card with color: #{$bg-color}";
+    // Add custom errors
+    // @error "Property must be either left or right.";
+    background-color: $bg-color;
+    padding: $pad;
+    color: $text-color;
+
+    .card-headline {
+        color: hotpink;
+    }
+
+    .card-description {
+        @include ellipsis;
+    }
+}
